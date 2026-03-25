@@ -330,6 +330,7 @@ def list_clients() -> list[dict]:
     return df_to_records(records_to_df(clients, Client))
 
 
+
 @app.post("/clients")
 def create_client(payload: ClientPayload) -> dict:
     with get_session() as session:
